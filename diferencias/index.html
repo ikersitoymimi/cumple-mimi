@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te quierou</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¿Son estas imágenes iguales?</h1>
+        <div id="infoMessage" class="info-message">Tienes 10 segundos para elegir</div>
+        <div id="countdown" class="countdown">3</div>
+        <div class="images-container">
+            <img id="image1" src="imagen1.jpg" alt="Imagen 1">
+            <img id="image2" src="imagen2.jpg" alt="Imagen 2">
+        </div>
+        <div id="result">.</div>
+        <button onclick="checkEquality(true)">Iguales</button>
+        <button onclick="checkEquality(false)">Diferentes</button>
+        <div id="timer">Suerte mimi :)</div>
+
+        <div id="restart" style="display: none;">
+            <p>¡Has fallado! ¿Quieres intentarlo de nuevo?</p>
+            <button onclick="resetGame()">Reiniciar</button>
+        </div>
+        <div id="level-counter" class="level-counter"></div>
+        <div id="lostMessage" style="display: none;">Inténtalo de nuevo.</div>
+        <button id="congratulationsBtn" style="display: none;" onclick="showCongratulations()">¡Enhorabuena!</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

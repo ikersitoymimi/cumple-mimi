@@ -1,0 +1,97 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6e6; /* Color de fondo rosa claro */
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-image {
+    flex: 0 0 15%; /* Establece el ancho fijo para las imágenes laterales */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .side-image img {
+        max-width: 100%; /* Ajusta el tamaño máximo de las imágenes laterales */
+        height: auto; /* Mantiene la proporción de aspecto */
+        border-radius: 10px; /* Bordes redondeados para las imágenes */
+    }
+
+.gif-container {
+    flex: 1; /* El contenedor del GIF ocupa todo el espacio disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Añadido para ajustar z-index */
+}
+
+    .gif-container img {
+        max-width: calc(100% - 40px); /* Ancho máximo del GIF, ajustado con margen */
+        max-height: calc(100vh - 40px); /* Altura máxima del GIF, ajustado con margen */
+        border-radius: 15px; /* Bordes redondeados para el GIF */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra suave para el GIF */
+        z-index: 1; /* Asegura que el GIF esté sobre las imágenes laterales */
+    }
+
+.texto-muac {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 2; /* Asegura que el texto esté sobre el GIF */
+}
+
+.texto-muac p {
+    font-size: 3.5rem; /* Tamaño grande para el título */
+    margin-bottom: 10px;
+    color: #ff6f61; /* Color rojo brillante para el título */
+    font-family: 'Pacifico', cursive; /* Fuente decorativa para el título */
+}
+.texto-superpuesto {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente negro para resaltar el texto */
+    width: 80%; /* Ancho máximo del contenedor de texto */
+    max-width: 500px; /* Límite de ancho para evitar que el texto sea demasiado ancho en pantallas grandes */
+    z-index: 2; /* Asegura que el texto esté sobre el GIF */
+}
+
+    .texto-superpuesto h1 {
+        font-size: 3.5rem; /* Tamaño grande para el título */
+        margin-bottom: 10px;
+        color: #ff6f61; /* Color rojo brillante para el título */
+        font-family: 'Pacifico', cursive; /* Fuente decorativa para el título */
+    }
+
+    .texto-superpuesto p {
+        font-size: 2rem; /* Tamaño de fuente para los párrafos */
+        margin: 10px 0;
+        line-height: 1.6; /* Espaciado entre líneas para una mejor legibilidad */
+        color: #fff; /* Color blanco para el texto */
+    }
+
+    .texto-superpuesto span {
+        font-size: 2.5rem; /* Tamaño grande para el emoji */
+        vertical-align: middle;
+        margin-left: 5px; /* Espacio adicional entre el texto y el emoji */
+        color: #ff6f61; /* Color rojo brillante para el emoji */
+    }
